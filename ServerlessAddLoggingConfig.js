@@ -15,13 +15,17 @@ class ServerlessAddLoggingConfig {
   async addLoggingConfig() {
     const template = this.serverless.service.provider.compiledCloudFormationTemplate;
 
+    const logFormat = service.custom && service.custom.loggingConfig && service.custom.loggingConfig.logFormat ? service.custom.loggingConfig.logFormat : 'JSON'
+    const applicationLogLevel = service.custom && service.custom.loggingConfig && service.custom.loggingConfig.applicationLogLevel ? service.custom.loggingConfig.applicationLogLevel : 'ERROR'
+    const systemLogLevel = service.custom && service.custom.loggingConfig && service.custom.loggingConfig.systemLogLevel ? service.custom.loggingConfig.systemLogLevel : 'WARN'
+
     Object.keys(template.Resources).forEach((key) => {
       const resource = template.Resources[key];
       if (resource.Type === 'AWS::Lambda::Function') {
         resource.Properties.LoggingConfig = {
-          LogFormat: "JSON",
-          ApplicationLogLevel: "ERROR",
-          SystemLogLevel: "WARN"
+          LogFormat: logFormat,
+          ApplicationLogLevel: applicationLogLevel,
+          SystemLogLevel: systemLogLevel
         };
       }
     });

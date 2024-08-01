@@ -1,6 +1,6 @@
 {
   "name": "serverless-add-logging-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This module can be used to add Advance lambda logging config in serverless",
   "main": "ServerlessAddLoggingConfig.js",
   "scripts": {
