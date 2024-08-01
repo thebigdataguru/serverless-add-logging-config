@@ -1,0 +1,25 @@
+{
+  "name": "serverless-add-logging-config",
+  "version": "1.0.0",
+  "description": "This module can be used to add Advance lambda logging config in serverless",
+  "main": "ServerlessAddLoggingConfig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebigdataguru/serverless-add-logging-config.git"
+  },
+  "keywords": [
+    "serverless",
+    "lambda",
+    "logging",
+    "logconfig"
+  ],
+  "author": "Ankur Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebigdataguru/serverless-add-logging-config/issues"
+  },
+  "homepage": "https://github.com/thebigdataguru/serverless-add-logging-config#readme"
+}
